@@ -2,7 +2,6 @@ class NavBar extends HTMLElement {
 
   constructor() {
     super();
-    this.shadowDOM = this.attachShadow({mode: 'open'});
   }
 
   connectedCallback(){
@@ -10,7 +9,7 @@ class NavBar extends HTMLElement {
   }
 
   render() {
-    this.shadowDOM.innerHTML = `
+    this.innerHTML = `
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <a href="#" class="navbar-brand">FlixG0 - your personal movie search engine</a>
     </nav>`;
