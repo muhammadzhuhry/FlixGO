@@ -19,7 +19,11 @@ module.exports = {
                         loader: "css-loader"
                     }
                 ]
-            }
+            },
+            {
+                test: /\.jpg$/,
+                loader: "url-loader?mimetype=image/png" 
+             }
         ]
     },
     plugins: [
