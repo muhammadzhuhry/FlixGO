@@ -4,7 +4,8 @@ const resultSection = document.querySelector('#results');
 
 const env = {
   API_URL: 'http://www.omdbapi.com/',
-  API_KEY: 'f13d554d'
+  API_KEY: 'f13d554d',
+  IMDB_URL: 'https://www.imdb.com/title/'
 };
 
 form.addEventListener('submit', submitForm);
@@ -40,7 +41,7 @@ function movieTemplate(movie) {
     <div class="card-body">
       <h5 class="card-title">${movie.Title}</h5>
       <p class="card-text">${movie.Year}</p>
-      <a target="_blank" href="https://www.imdb.com/title/${movie.imdbID}/" class="btn btn-outline-danger btn-block">Check on IMDB</a>
+      <a target="_blank" href="${env.IMDB_URL}${movie.imdbID}/" class="btn btn-outline-danger btn-block">Check on IMDB</a>
     </div>
   </div>`;
 }
