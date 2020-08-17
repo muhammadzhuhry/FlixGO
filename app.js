@@ -17,7 +17,7 @@ async function submitForm(event) {
     const results = await getResult(searchBox);
     showResults(results);
   } catch (error) {
-    console.log(error);
+    showError(error);
   }
 }
 
@@ -49,4 +49,11 @@ function showResults(response) {
   resultSection.innerHTML = response.reduce((html, movie) => {
     return html + movieTemplate(movie);
   }, '');
+}
+
+function showError(error) {
+  resultSection.innerHTML = `
+  <div class="alert alert-warning col-12" role="alert">
+    ${error.message}
+  </div>`;
 }
