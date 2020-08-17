@@ -1,3 +1,5 @@
+import notfoundPoster from '../assets/notfound.jpg';
+
 function main() {
 
   const form = document.querySelector('form');
@@ -39,7 +41,7 @@ function main() {
   function movieTemplate(movie) {
     return `
     <div class="card col-md-3 mt-3">
-      <img class="card-img-top" src="${movie.Poster}" alt="Card image cap">
+      <img class="card-img-top" src="${movie.Poster !== 'N/A' ? movie.Poster : notfoundPoster }" alt="Card image cap">
       <div class="card-body">
         <h5 class="card-title">${movie.Title}</h5>
         <p class="card-text">${movie.Year}</p>
