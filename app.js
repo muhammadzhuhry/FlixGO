@@ -40,7 +40,7 @@ function movieTemplate(movie) {
     <div class="card-body">
       <h5 class="card-title">${movie.Title}</h5>
       <p class="card-text">${movie.Year}</p>
-      <a target="_blank" href="https://www.imdb.com/title/${movie.imdbID}/" class="btn btn-secondary btn-block">Check on IMDB</a>
+      <a target="_blank" href="https://www.imdb.com/title/${movie.imdbID}/" class="btn btn-outline-danger btn-block">Check on IMDB</a>
     </div>
   </div>`;
 }
