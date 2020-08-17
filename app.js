@@ -31,3 +31,14 @@ async function getResult(searchBox) {
 
    return data.Search;
 }
+
+async function movieTemplate(movie) {
+  return `
+  <div class="card col-$4">
+    <img class="card-img-top" src="${movie.Poster}" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">${movie.Title}</h5>
+      <p class="card-text">${movie.Year}</p>
+    </div>
+  </div>`;
+}
