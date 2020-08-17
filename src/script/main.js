@@ -38,7 +38,7 @@ function main() {
   
   function movieTemplate(movie) {
     return `
-    <div class="card col-3 mt-3">
+    <div class="card col-md-3 mt-3">
       <img class="card-img-top" src="${movie.Poster}" alt="Card image cap">
       <div class="card-body">
         <h5 class="card-title">${movie.Title}</h5>
