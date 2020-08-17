@@ -21,3 +21,6 @@ jspm_packages/
 # IDE environment
 .vscode
 .idea
+
+# build
+dist
