@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,400;1,700&display=swap');
+
+header > .hero-text > h1 {
+  font-size: 120px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+header > .hero-text > h1 > span {
+  font-weight: bold !important;
+  color: #D33682;
+}
+
+@media (max-width: 768px) {
+  header > .hero-text > h1 {
+    font-size: 100px;
+  }
+}
