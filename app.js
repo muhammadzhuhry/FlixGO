@@ -1,5 +1,6 @@
 const form = document.querySelector('form');
 const input = document.querySelector('#searchBox')
+const resultSection = document.querySelector('#results');
 
 const env = {
   API_URL: 'http://www.omdbapi.com/',
@@ -14,7 +15,7 @@ async function submitForm(event) {
   
   try {
     const results = await getResult(searchBox);
-    console.log(results);
+    showResults(results);
   } catch (error) {
     console.log(error);
   }
@@ -32,13 +33,20 @@ async function getResult(searchBox) {
    return data.Search;
 }
 
-async function movieTemplate(movie) {
+function movieTemplate(movie) {
   return `
-  <div class="card col-$4">
+  <div class="card col-3 mt-3">
     <img class="card-img-top" src="${movie.Poster}" alt="Card image cap">
     <div class="card-body">
       <h5 class="card-title">${movie.Title}</h5>
       <p class="card-text">${movie.Year}</p>
+      <a target="_blank" href="https://www.imdb.com/title/${movie.imdbID}/" class="btn btn-secondary btn-block">Check on IMDB</a>
     </div>
   </div>`;
+}
+
+function showResults(response) {
+  resultSection.innerHTML = response.reduce((html, movie) => {
+    return html + movieTemplate(movie);
+  }, '');
 }
