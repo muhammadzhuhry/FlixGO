@@ -6,7 +6,7 @@
   "scripts": {
     "build": "webpack --mode production --config webpack.prod.js",
     "start-dev": "webpack-dev-server --config webpack.dev.js --open",
-    "start": "webpack --mode production --config webpack.prod.js"
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
@@ -34,6 +34,7 @@
   },
   "dependencies": {
     "bootswatch": "^4.5.2",
+    "express": "^4.17.1",
     "regenerator-runtime": "^0.13.7",
     "url-loader": "^4.1.0"
   }
